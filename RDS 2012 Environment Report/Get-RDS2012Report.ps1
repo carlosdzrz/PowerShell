@@ -108,7 +108,7 @@
 	.LINK
 		https://technet.microsoft.com/library/jj215451(v=wps.630).aspx
         https://social.technet.microsoft.com/wiki/contents/articles/12835.using-powershell-to-install-configure-and-maintain-rds-in-windows-server-2012.aspx
-        Htmel Style:
+        Html Style:
 		https://gallery.technet.microsoft.com/scriptcenter/Hyper-V-Reporting-Script-4adaf5d0		
 #>
 #endregion Help
@@ -178,7 +178,7 @@ $Time = Get-Date -Format "hh:mm:ss tt"
 
 #RDS variables
 UpdateProgress 10 "Initializing variables"
-ipmo RemoteDesktop
+Import-Module RemoteDesktop
 $FormatEnumerationLimit = 40
 $CB = $null
 $CBHA = $null
@@ -191,7 +191,7 @@ if (Get-RDConnectionBrokerHighAvailability -ErrorAction Stop)
 }
 else
 {
-    $CBRole = Get-RDServer | ?{$_.Roles -match 'RDS-CONNECTION-BROKER'}
+    $CBRole = Get-RDServer | Where-Object{$_.Roles -match 'RDS-CONNECTION-BROKER'}
     $CB = $CBRole.Server
 }
 $outDeploymentOverviewTable = ""
