@@ -6,6 +6,9 @@
 
 .AUTHOR CarlosDZRZ
 
+.DESCRIPTION
+	Disable extraneous services on Server 2016 Desktop Experience
+
 .COMPANYNAME
 
 .COPYRIGHT
@@ -15,11 +18,7 @@
 .LICENSEURI
 
 .PROJECTURI
-    https://gist.github.com/xtratoast/dea055ec0e1a31d91161b6d431e90146
-    https://blogs.technet.microsoft.com/secguide/2017/05/29/guidance-on-disabling-system-services-on-windows-server-2016-with-desktop-experience/
-    https://docs.microsoft.com/en-us/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server
-    https://docs.microsoft.com/en-us/windows/application-management/per-user-services-in-windows
-    https://technet.microsoft.com/en-us/library/cc959920.aspx
+
 .ICONURI
 
 .EXTERNALMODULEDEPENDENCIES 
@@ -38,8 +37,6 @@ Version 1.0: Original published version.
 <#
 .SYNOPSIS
 	Disable extraneous services on Server 2016 Desktop Experience
-.DESCRIPTION
-	Disable extraneous services on Server 2016 Desktop Experience
 .PARAMETER  ComputerName
     Disabled the services installed on the specified server. The default is the local computer.
 .PARAMETER  PathFolder
@@ -47,7 +44,13 @@ Version 1.0: Original published version.
 .EXAMPLE
 	DisablingServicesOnServer2016wDE -ComputerName srv01 -PathFolder C:\temp\DisabledServices\
 .OUTPUTS
-	Log file.	
+	Log file.
+.LINK
+    https://gist.github.com/xtratoast/dea055ec0e1a31d91161b6d431e90146
+    https://blogs.technet.microsoft.com/secguide/2017/05/29/guidance-on-disabling-system-services-on-windows-server-2016-with-desktop-experience/
+    https://docs.microsoft.com/en-us/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server
+    https://docs.microsoft.com/en-us/windows/application-management/per-user-services-in-windows
+    https://technet.microsoft.com/en-us/library/cc959920.aspx	
 #>
 [CmdletBinding()]    
 param(
