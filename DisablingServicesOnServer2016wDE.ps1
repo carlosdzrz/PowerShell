@@ -1,4 +1,40 @@
-function DisablingServicesOnServer2016wDE{
+<#PSScriptInfo
+
+.VERSION 1.0
+
+.GUID ddf70b61-e4ab-4727-9ea0-eaa440cf7262
+
+.AUTHOR CarlosDZRZ
+
+.COMPANYNAME
+
+.COPYRIGHT
+
+.TAGS Disabling Services Server2016
+
+.LICENSEURI
+
+.PROJECTURI
+    https://gist.github.com/xtratoast/dea055ec0e1a31d91161b6d431e90146
+    https://blogs.technet.microsoft.com/secguide/2017/05/29/guidance-on-disabling-system-services-on-windows-server-2016-with-desktop-experience/
+    https://docs.microsoft.com/en-us/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server
+    https://docs.microsoft.com/en-us/windows/application-management/per-user-services-in-windows
+    https://technet.microsoft.com/en-us/library/cc959920.aspx
+.ICONURI
+
+.EXTERNALMODULEDEPENDENCIES 
+
+.REQUIREDSCRIPTS
+
+.EXTERNALSCRIPTDEPENDENCIES
+
+.RELEASENOTES
+DateCreated: 12/23/2017
+Version 1.0: Original published version.
+
+.PRIVATEDATA
+
+#>
 <#
 .SYNOPSIS
 	Disable extraneous services on Server 2016 Desktop Experience
@@ -11,17 +47,7 @@ function DisablingServicesOnServer2016wDE{
 .EXAMPLE
 	DisablingServicesOnServer2016wDE -ComputerName srv01 -PathFolder C:\temp\DisabledServices\
 .OUTPUTS
-	Log file.
-.NOTES
-    Name: DisablingServicesOnServer2016wDE
-    Author: CarlosDZRZ
-    DateCreated: 12/23/2017
-.LINK
-    https://gist.github.com/xtratoast/dea055ec0e1a31d91161b6d431e90146
-    https://blogs.technet.microsoft.com/secguide/2017/05/29/guidance-on-disabling-system-services-on-windows-server-2016-with-desktop-experience/
-    https://docs.microsoft.com/en-us/windows-server/security/windows-services/security-guidelines-for-disabling-system-services-in-windows-server
-    https://docs.microsoft.com/en-us/windows/application-management/per-user-services-in-windows
-    https://technet.microsoft.com/en-us/library/cc959920.aspx	
+	Log file.	
 #>
 [CmdletBinding()]    
 param(
@@ -136,5 +162,4 @@ Process{
 }
 End{
     $stream.close()
-}    
-}#end function DisablingServicesOnServer2016wDE
+}
