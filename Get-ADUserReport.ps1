@@ -1,10 +1,34 @@
+<#PSScriptInfo
+
+.VERSION 1.0
+
+.GUID e6b77778-2225-42cb-8dc3-5f18f385a19a
+
+.AUTHOR
+    CarlosDZRZ
+
+.DESCRIPTION
+	Returns a customized list of Active Directory account information for a single user. The customized list is a combination of the fields that are most commonly needed to review when an employee calls the helpdesk for assistance.
+
+.COMPANYNAME
+
+.COPYRIGHT
+
+.TAGS User Report Info
+
+.EXTERNALMODULEDEPENDENCIES ActiveDirectory
+
+.RELEASENOTES
+Version 1.0: Original published version.
+
+.PRIVATEDATA
+
+#>
+
 Function Get-ADUserReport {
 <#
     .SYNOPSIS
         Returns a customized list of Active Directory account information for a single user
-    .DESCRIPTION
-        Returns a customized list of Active Directory account information for a single user. The customized list is a combination
-        of the fields that are most commonly needed to review when an employee calls the helpdesk for assistance.
     .EXAMPLE
         Get-ADUserReport <UserName>
         Returns a customized list of AD account information from UserName

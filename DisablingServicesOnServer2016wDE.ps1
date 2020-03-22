@@ -1,39 +1,28 @@
 <#PSScriptInfo
 
-.VERSION 1.0
+.VERSION 1.1
 
 .GUID ddf70b61-e4ab-4727-9ea0-eaa440cf7262
 
-.AUTHOR CarlosDZRZ
+.AUTHOR
+    CarlosDZRZ
 
 .DESCRIPTION
 	Disable extraneous services on Server 2016 Desktop Experience
 
-.COMPANYNAME
-
-.COPYRIGHT
-
 .TAGS Disabling Services Server2016
 
-.LICENSEURI
-
-.PROJECTURI
-
-.ICONURI
-
-.EXTERNALMODULEDEPENDENCIES 
-
-.REQUIREDSCRIPTS
-
-.EXTERNALSCRIPTDEPENDENCIES
+.EXTERNALMODULEDEPENDENCIES
 
 .RELEASENOTES
 DateCreated: 12/23/2017
 Version 1.0: Original published version.
+Version 1.1: Changes for published PowerShellGallery.
 
 .PRIVATEDATA
 
 #>
+function DisablingServicesOnServer2016wDE{
 <#
 .SYNOPSIS
 	Disable extraneous services on Server 2016 Desktop Experience
@@ -45,6 +34,10 @@ Version 1.0: Original published version.
 	DisablingServicesOnServer2016wDE -ComputerName srv01 -PathFolder C:\temp\DisabledServices\
 .OUTPUTS
 	Log file.
+.NOTES
+    Name: DisablingServicesOnServer2016wDE
+    Author: CarlosDZRZ
+    DateCreated: 12/23/2017
 .LINK
     https://gist.github.com/xtratoast/dea055ec0e1a31d91161b6d431e90146
     https://blogs.technet.microsoft.com/secguide/2017/05/29/guidance-on-disabling-system-services-on-windows-server-2016-with-desktop-experience/
@@ -165,4 +158,5 @@ Process{
 }
 End{
     $stream.close()
-}
+}    
+}#end function DisablingServicesOnServer2016wDE
